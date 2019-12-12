@@ -3,6 +3,41 @@
     <link rel="stylesheet" type="text/css" href="css/mystyle.css">
 </head>
 <html>
-    <body>
+    <body bgcolor="yellow">
+                <h2>Start Date</h2>
+                
+                        <form>
+                                <label>Fecha</label> <input type="date" id="fecha"; onchange= "document.getElementById('fecha').value=this.value;" >
+                                <label>Dias</label> <input type="text" minlength="1" maxlength="5" id="dias"; onchange= "document.getElementById('dias').value=this.value;" >
+                                <p id="r"></p>
+                                <input type="button" value="calcular"  onclick="calcDate()">
+                        </form>
+                            <br><br><br><br>
+                <form>
+                   <label> Fecha Inicio </label><input type="date" id="inicio" min="?php echo date('Y-m-d')"; onchange= "document.getElementById('inicio').value=this.value;"> 
+                   <label> Fecha Fin </label> <input type="date" id="fin" min="?php echo date('Y-m-d')"; onchange= "document.getElementById('fin').value=this.value;">
+                
+                    <p id="d"></p>
+                    <input type="button" value="calcular" onclick="getDays()"><br><br><br><br>
+                
+                    <label> Fecha Inicio </label><input type="date" id="finicio" min="?php echo date('Y-m-d')"; onchange= "document.getElementById('finicio').value=this.value;"> 
+                    <label>Dias</label> <input type="text" minlength="1" maxlength="5" id="diash"; onchange= "document.getElementById('diash').value=this.value;" >
+                    <p id="c"></p>
+                    <input type="button" value="calcular" onclick="calcWorkingDate()"><br>
+                    <br>
+                    <label> Fecha Inicio </label><input type="date" id="finicio" min="?php echo date('Y-m-d')"; onchange= "document.getElementById('finicio').value=this.value;"> 
+                    <label>Dias</label> <input type="text" minlength="1" maxlength="5" id="diash"; onchange= "document.getElementById('diash').value=this.value;" >
+                    <p id="c"></p>
+                    <input type="button" value="calcular" onclick="calcWorkingDate()">
+                   
+                </form>
+                
+               
+                </body>
+                </html>
+                 
+                <script src="js/dateCalc.js"></script>
+                
+
     </body>
 </html>
